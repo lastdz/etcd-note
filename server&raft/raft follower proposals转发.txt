@@ -1,0 +1,2 @@
+follower收到请求后可以转发给Leader 然后进行广播append
+由于可能没有leader所以导致转发被阻塞 所以需要一个新的channel存放proposal

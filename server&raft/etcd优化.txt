@@ -1,0 +1,3 @@
+prevote
+readindex
+leader自动感知不是majority变follower 

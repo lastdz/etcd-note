@@ -1,0 +1,2 @@
+figure 8： leader必须要复制完当前term的至少一条日志以后才可以commit
+figure 4：节点加入时和选举时同步发生，当节点一次加入两个会出现一个term两个leader

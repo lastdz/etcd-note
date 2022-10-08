@@ -1,0 +1,4 @@
+1.每次有RPC请求就先放到raft.msgs的slice里,日志等通过raftlog接口获取
+2,node死循环读msgs 然后发送给readyc channel ,然后清空msgs 然后阻塞等待(advancec)上层执行完毕
+3,raftnode 调用start 监听readyc 将message 通过rpc发出，将Entry 进行append
+4.调用完成后Advance（）通过advancec channel通知node执行完毕  更新applied 进行一次完整上下层沟通
